@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SensorApp — Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 0.95em;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: #fff;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #222;
+        }
+        h3 {
+            font-size: 1.1em;
+            color: #ccc;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            color: #bbb;
+            margin-bottom: 12px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li { margin-bottom: 6px; }
+        strong { color: #fff; }
+        .highlight {
+            background: #1a1a2e;
+            border-left: 3px solid #6c63ff;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .highlight p { margin-bottom: 0; }
+        a { color: #6c63ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">SensorApp — Body Intelligence Platform<br>Effective Date: February 20, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>SensorApp ("we", "our", or "the app") is a health and wellness application that uses your iPhone's built-in sensors to provide real-time body intelligence insights. We are committed to protecting your privacy. This Privacy Policy explains what data the app accesses, how it is used, and how it is protected.</p>
+
+        <div class="highlight">
+            <p><strong>Key Principle:</strong> All sensor data, including face data, is processed entirely on your device. We do not collect, transmit, store on servers, or share any personal data with anyone. There is no backend, no cloud storage, no analytics, and no user accounts.</p>
+        </div>
+
+        <h2>2. Data Collection and Processing</h2>
+        <p>SensorApp accesses the following device sensors for real-time health monitoring. All data processing occurs locally on your device and is held only in temporary memory during active use.</p>
+
+        <h3>2.1 Camera (Rear)</h3>
+        <p>Used for heart rate measurement via photoplethysmography (PPG). The camera captures light variations from your fingertip to estimate heart rate, HRV, and respiratory rate. No images or video are recorded or stored.</p>
+
+        <h3>2.2 Accelerometer</h3>
+        <p>Used for seismocardiography (SCG) to detect cardiac vibrations when the phone is placed on the chest. Motion data is processed in real time and not stored.</p>
+
+        <h3>2.3 Camera (Front — Vision Framework)</h3>
+        <p>Used for body pose detection via Apple's Vision framework to track 19 body joints and assess posture. No images or video are recorded or stored.</p>
+
+        <h3>2.4 Microphone</h3>
+        <p>Used for voice analysis (speech recognition and sentiment analysis) and environmental sound classification. Audio is processed on-device in real time and is not recorded or stored.</p>
+
+        <h3>2.5 Barometer</h3>
+        <p>Used to measure atmospheric pressure and relative altitude changes. Data is processed in real time and not stored.</p>
+
+        <h3>2.6 Haptic Engine</h3>
+        <p>Used to deliver biofeedback patterns through Core Haptics. No data is collected from this feature.</p>
+
+        <h2 id="face-data">3. TrueDepth Camera and Face Data</h2>
+        <p>This section specifically addresses how SensorApp uses the TrueDepth camera and face data, in accordance with Apple's guidelines.</p>
+
+        <h3>3.1 What Face Data Is Collected</h3>
+        <p>The app uses Apple's ARKit framework with <strong>ARFaceTrackingConfiguration</strong> to access the TrueDepth front-facing camera. The app reads the following face data in real time:</p>
+        <ul>
+            <li><strong>52 facial blend shape coefficients</strong> — numerical values (0.0 to 1.0) representing facial muscle positions (e.g., eyeBlink, mouthSmile, browDown). These are abstract numerical coefficients, not images or facial geometry.</li>
+            <li><strong>Derived metrics</strong> — the app computes emotion labels (e.g., happy, sad, neutral), stress levels, attention scores, and eye openness from the blend shape coefficients using on-device algorithms.</li>
+        </ul>
+
+        <h3>3.2 How Face Data Is Used</h3>
+        <p>Face data is used <strong>exclusively</strong> for the following purposes:</p>
+        <ul>
+            <li>Displaying real-time emotion detection results to the user on screen.</li>
+            <li>Calculating a stress level estimate shown on the dashboard.</li>
+            <li>Providing wellness insights and correlations within the app.</li>
+        </ul>
+        <p>Face data is <strong>not</strong> used for facial recognition, user identification, authentication, advertising, or any purpose other than the health and wellness features described above.</p>
+
+        <h3>3.3 Face Data Storage and Retention</h3>
+        <div class="highlight">
+            <p><strong>Face data is never stored persistently.</strong> All face data (blend shape coefficients and derived metrics) exists only in temporary application memory (RAM) while the Face Analysis feature is actively running. The moment the user stops the Face Analysis session or navigates away from the feature, all face data is immediately discarded from memory. No face data is written to disk, saved to files, stored in databases, or persisted in any form.</p>
+        </div>
+
+        <h3>3.4 Face Data Sharing</h3>
+        <p><strong>Face data is never shared with any third party.</strong> Face data is never transmitted off the device. There is no network communication, no server, no cloud storage, no analytics service, and no third-party SDK that receives face data. All processing is performed entirely on-device using Apple's ARKit framework.</p>
+
+        <h3>3.5 Face Data Retention Period</h3>
+        <p>Face data is retained for <strong>zero seconds</strong> beyond active use. Data exists only in volatile memory during an active Face Analysis session and is discarded immediately when the session ends. There is no persistent storage of face data whatsoever.</p>
+
+        <h2>4. Apple HealthKit Integration</h2>
+        <p>The app offers optional integration with Apple HealthKit to read health summaries (steps, calories, distance). HealthKit access is requested at runtime and requires your explicit consent. The app may write sensor measurements to HealthKit if you enable the "Auto-Save to HealthKit" setting. HealthKit data is governed by Apple's own privacy protections and is never accessed by us.</p>
+
+        <h2>5. Data Storage</h2>
+        <p>SensorApp does not use any remote servers, cloud services, databases, or external storage. The only persistent data stored on your device consists of:</p>
+        <ul>
+            <li><strong>User preferences</strong> — toggle states for settings (haptic feedback, HealthKit sync, refresh rate), stored locally via UserDefaults.</li>
+            <li><strong>Onboarding completion flag</strong> — a single boolean value indicating whether you have completed the onboarding flow.</li>
+        </ul>
+        <p>No sensor readings, health data, face data, audio, images, or personal information are stored persistently.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>SensorApp does not integrate any third-party services. There are no analytics tools, advertising SDKs, crash reporters, social media integrations, or external APIs. The app operates entirely offline and on-device.</p>
+
+        <h2>7. Data Security</h2>
+        <p>Because all data processing occurs on-device and no data is transmitted or stored remotely, there is no risk of server-side data breaches. Sensor data exists only in volatile memory during active sessions and is protected by iOS sandboxing and device-level encryption.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>SensorApp does not knowingly collect personal information from children. The app does not require account creation, does not collect personal data, and does not transmit any data off the device.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+        <h2>10. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p><a href="mailto:bakytonly@gmail.com">bakytonly@gmail.com</a></p>
+
+        <div class="footer">
+            <p>&copy; 2026 SensorApp. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
